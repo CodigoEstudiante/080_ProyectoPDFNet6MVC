@@ -1,0 +1,14 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+
+    <a class="btn btn-primary" asp-controller="Home" asp-action="MostrarPDFenPagina" target="_blank">Ver PDF en pagina</a>
+    <a class="btn btn-primary" asp-controller="Home" asp-action="DescargarPDF">Descargar PDF</a>
+    <br />
+    <br />
+    <embed src="@Url.Action("MostrarPDFenPagina","Home")"  width="800" height="400" type="application/pdf"/>
+</div>
